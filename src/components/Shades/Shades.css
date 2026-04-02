@@ -1,0 +1,151 @@
+.shades-section {
+  background: var(--cream-warm);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.shades-track {
+  display: flex;
+  height: 100%;
+  width: max-content;
+  align-items: center;
+  padding: 0 10vw;
+}
+
+.shades-intro-panel {
+  width: 40vw;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 5vw;
+}
+
+.shades-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 24px;
+}
+
+.shades-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--charcoal);
+  letter-spacing: -0.02em;
+}
+
+.shades-title em {
+  font-style: italic;
+  color: var(--rose);
+}
+
+.scroll-indicator-horizontal {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 40px;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+}
+
+.scroll-arrow {
+  color: var(--rose);
+  font-size: 1.2rem;
+  animation: bounceRight 2s infinite;
+}
+
+@keyframes bounceRight {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+}
+
+.shade-card {
+  width: 400px;
+  height: 60vh;
+  min-height: 400px;
+  margin-right: 80px;
+  display: flex;
+  flex-direction: column;
+  background: var(--cream);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+}
+
+.shade-color-display {
+  flex: 1;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.clear-glass-effect {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.2) 100%);
+  backdrop-filter: blur(10px);
+}
+
+.shade-details {
+  padding: 0 16px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.shade-number {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--warm-gray-lt);
+  margin-bottom: 8px;
+}
+
+.shade-name {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.shade-desc {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--warm-gray);
+}
+
+.shades-padding-panel {
+  width: 20vw;
+}
+
+@media (max-width: 1024px) {
+  .shade-card {
+    width: 320px;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .shades-intro-panel {
+    width: 80vw;
+  }
+  .shade-card {
+    width: 280px;
+    margin-right: 24px;
+  }
+}

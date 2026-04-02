@@ -1,0 +1,160 @@
+.product-showcase {
+  background: var(--cream);
+  padding: var(--space-2xl) 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.showcase-header {
+  text-align: center;
+  padding: 0 6vw;
+  margin-bottom: var(--space-xl);
+  position: relative;
+  z-index: 10;
+}
+
+.showcase-eyebrow {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 24px;
+}
+
+.showcase-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--charcoal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: -0.02em;
+}
+
+.showcase-title-line {
+  display: block;
+}
+
+.showcase-title em {
+  font-style: italic;
+  color: var(--blush-deep);
+}
+
+.showcase-gallery {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 5vw;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5vw;
+}
+
+.showcase-img-wrap {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.06);
+}
+
+.showcase-caption {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--white);
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+.sc-num {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.sc-name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+  font-style: italic;
+}
+
+/* 
+ * Redesign: Use width 100% and height auto so images dictate their
+ * natural dimensions without cropping! 
+ */
+.showcase-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 1s var(--ease-out-expo);
+}
+
+.showcase-img-wrap:hover img {
+  transform: scale(1.03);
+}
+
+/* Assign to elegant CSS Grid for floating, staggered look */
+.img-1 {
+  grid-column: 1 / 6;
+  margin-top: 15vh;
+}
+
+.img-2 {
+  grid-column: 8 / 13;
+}
+
+.img-3 {
+  grid-column: 2 / 7;
+  margin-top: -10vh;
+}
+
+.img-4 {
+  grid-column: 7 / 13;
+  margin-top: 10vh;
+}
+
+@media (max-width: 1024px) {
+  .img-1 {
+    grid-column: 1 / 7;
+  }
+
+  .img-2 {
+    grid-column: 7 / 13;
+  }
+
+  .img-3 {
+    grid-column: 1 / 8;
+    margin-top: 0vh;
+  }
+
+  .img-4 {
+    grid-column: 6 / 13;
+    margin-top: 10vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .showcase-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .img-1,
+  .img-2,
+  .img-3,
+  .img-4 {
+    margin-top: 0;
+  }
+}

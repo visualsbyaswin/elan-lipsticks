@@ -1,0 +1,97 @@
+.cta-band {
+  background: var(--warm-black);
+  padding: var(--space-xl) 6vw var(--space-2xl);
+  text-align: center;
+}
+
+.cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.cta-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  color: var(--cream);
+  letter-spacing: -0.02em;
+}
+
+.cta-heading em {
+  font-style: italic;
+  color: var(--blush);
+}
+
+.cta-subtext {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--warm-gray-lt);
+  margin-bottom: 8px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--warm-black);
+  background: var(--blush);
+  border: none;
+  padding: 16px 40px;
+  border-radius: 100px;
+  cursor: none;
+  text-decoration: none;
+  transition: all 0.4s var(--ease-out-expo);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--rose);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s var(--ease-out-expo);
+  border-radius: 100px;
+}
+
+.cta-button:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.cta-button span,
+.cta-button svg {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-button:hover {
+  color: #fff;
+  transform: scale(1.02);
+}
+
+.cta-button svg {
+  transition: transform 0.4s var(--ease-out-expo);
+}
+
+.cta-button:hover svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 640px) {
+  .cta-button {
+    padding: 14px 32px;
+    font-size: 0.75rem;
+  }
+}

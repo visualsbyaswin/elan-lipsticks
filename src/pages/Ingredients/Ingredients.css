@@ -1,0 +1,244 @@
+.ingredients-page {
+  background: var(--cream);
+  color: var(--charcoal);
+  overflow-x: hidden;
+}
+
+/* Clinical Hero */
+.ing-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 8vw;
+  gap: 5vw;
+}
+
+.ing-hero-content {
+  flex: 1.2;
+}
+
+.ing-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  margin-top: 30px;
+}
+
+.ing-hero-title span {
+  display: inline-block;
+}
+
+.ing-hero-title .indent {
+  margin-left: 15vw;
+}
+
+.ing-hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ing-img-frame {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  border-radius: 4px;
+  position: relative;
+}
+
+.ing-parallax-img {
+  width: 100%;
+  height: 140%;
+  object-fit: cover;
+  will-change: transform;
+}
+
+.ing-vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.2), transparent);
+}
+
+/* Intro Statement */
+.ing-formula-intro {
+  padding: 10vh 0 15vh;
+}
+
+.container-sm {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 6vw;
+  text-align: center;
+}
+
+.ing-lead {
+  font-family: var(--font-body);
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+  line-height: 1.5;
+  color: var(--warm-gray);
+  font-weight: 300;
+}
+
+/* Ingredient Manifesto Grid */
+.ing-manifesto {
+  padding-bottom: 20vh;
+}
+
+.ing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.ing-card {
+  background: #fff;
+  padding: 50px;
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 400px;
+}
+
+.ing-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.ing-num {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--rose);
+}
+
+.ing-benefit {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: var(--cream);
+  padding: 6px 12px;
+  border-radius: 100px;
+  color: var(--warm-gray);
+}
+
+.ing-card-body h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.ing-card-body p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--warm-gray);
+  font-weight: 300;
+}
+
+.ing-card-footer {
+  margin-top: 40px;
+}
+
+.ing-meter {
+  width: 100%;
+  height: 2px;
+  background: rgba(0,0,0,0.05);
+  margin-bottom: 15px;
+}
+
+.ing-meter-fill {
+  height: 100%;
+  background: var(--charcoal);
+  transition: width 1.5s var(--ease-out-expo);
+}
+
+.ing-conc {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--warm-gray-lt);
+}
+
+/* The Blacklist (WOW) */
+.ing-blacklist {
+  background: var(--charcoal);
+  color: #fff;
+  padding: 15vh 10vw;
+  text-align: center;
+}
+
+.blacklist-header {
+  margin-bottom: 80px;
+}
+
+.blacklist-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  margin-top: 20px;
+  letter-spacing: -0.02em;
+}
+
+.blacklist-title em {
+  font-style: italic;
+  font-family: var(--font-display);
+  color: var(--rose-pale);
+}
+
+.blacklist-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.b-item {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  padding: 24px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px;
+  transition: all 0.4s ease;
+}
+
+.b-item:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: var(--rose-pale);
+}
+
+.blacklist-footer {
+  margin-top: 80px;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--warm-gray-lt);
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .ing-item-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .ing-item-left {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .ing-list-header .ing-concentration {
+    display: none;
+  }
+  .ing-percentage {
+    font-size: 1rem;
+    color: var(--rose);
+  }
+}

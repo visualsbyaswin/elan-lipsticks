@@ -1,0 +1,359 @@
+.about-page {
+  background: var(--cream);
+  color: var(--charcoal);
+  overflow-x: hidden;
+}
+
+/* Cinematic Hero */
+.about-hero {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 10vw;
+  margin-bottom: 20vh;
+}
+
+.hero-visual {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), transparent);
+}
+
+.hero-text-floating {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.about-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 12vw, 12rem);
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+  margin-top: 20px;
+}
+
+.about-hero-title span {
+  display: inline-block;
+  will-change: transform;
+}
+
+.about-hero-title .indent {
+  margin-left: 20vw;
+}
+
+.sc-eyebrow.white {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Studio Section */
+.studio-section {
+  padding: 0 10vw 20vh;
+}
+
+.studio-grid {
+  display: flex;
+  gap: 10vw;
+  align-items: flex-start;
+}
+
+.studio-left {
+  flex: 1.2;
+}
+
+.studio-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  margin: 30px 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.studio-title em {
+  font-style: italic;
+  font-family: var(--font-display);
+  color: var(--rose);
+}
+
+.studio-desc {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--warm-gray);
+  max-width: 500px;
+  margin-bottom: 60px;
+}
+
+.studio-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 40px;
+}
+
+.stat strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.stat span {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--warm-gray-lt);
+}
+
+.studio-right {
+  flex: 1;
+}
+
+.parallax-frame {
+  width: 100%;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.studio-parallax {
+  width: 100%;
+  height: 130%;
+  object-fit: cover;
+  will-change: transform;
+}
+
+/* Philosophy Section */
+.philosophy-wow {
+  background: var(--charcoal);
+  color: #fff;
+  padding: 15vh 0;
+}
+
+.container-md {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 6vw;
+}
+
+.philosophy-header {
+  margin-bottom: 10vh;
+}
+
+.phil-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.phil-card {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px 0 0 40px;
+}
+
+.phil-num {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--rose-pale);
+  opacity: 0.4;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.phil-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+}
+
+.phil-card p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--warm-gray);
+  margin-bottom: 40px;
+}
+
+.about-craft-stats {
+  display: flex;
+  gap: 48px;
+}
+
+.c-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Immersive Quote Section */
+.about-quote-immersive {
+  position: relative;
+  width: 100%;
+  padding: 30vh 0;
+  background: var(--cream);
+  overflow: hidden;
+  text-align: center;
+}
+
+.quote-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: 30vw;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.03);
+  pointer-events: none;
+  white-space: nowrap;
+  letter-spacing: -0.05em;
+  z-index: 1;
+}
+
+.quote-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.decorative-mark {
+  font-family: var(--font-display);
+  font-size: 10rem;
+  line-height: 1;
+  color: var(--rose-pale);
+  opacity: 0.5;
+  margin-bottom: -40px;
+}
+
+.quote-text-large {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--charcoal);
+  margin-bottom: 60px;
+  font-weight: 400;
+}
+
+.quote-text-large em {
+  font-style: italic;
+  font-family: var(--font-display);
+  color: var(--rose);
+}
+
+.quote-attribution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.author-line {
+  width: 40px;
+  height: 1px;
+  background: var(--rose);
+  margin-bottom: 8px;
+}
+
+.author-name {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  color: var(--charcoal);
+  font-weight: 600;
+}
+
+.author-role {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--warm-gray-lt);
+}
+
+@media (max-width: 1024px) {
+  .about-quote-immersive {
+    padding: 20vh 0;
+  }
+
+  .quote-text-large {
+    font-size: 2.2rem;
+  }
+
+  .decorative-mark {
+    font-size: 6rem;
+    margin-bottom: -20px;
+  }
+}
+
+.c-stat strong {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--charcoal);
+}
+
+.c-stat span {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--rose);
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--cream-dark);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--warm-gray);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+
+@media (max-width: 1024px) {
+
+  .about-grid,
+  .about-craft-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .about-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image-standin {
+    aspect-ratio: 16/9;
+  }
+}
