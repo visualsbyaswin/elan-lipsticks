@@ -6,7 +6,7 @@ import './ScrollSequence.css';
 gsap.registerPlugin(ScrollTrigger);
 
 const FRAME_COUNT = 252;
-const FRAME_PATH = (i) => `/sequence/ezgif-frame-${String(i).padStart(3, '0')}.jpg`;
+const FRAME_PATH = (i) => `${import.meta.env.BASE_URL}sequence/ezgif-frame-${String(i).padStart(3, '0')}.jpg`;
 
 export default function ScrollSequence({ loaded, setLoadProgress, setLoaded }) {
   const canvasRef = useRef(null);
